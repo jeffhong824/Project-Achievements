@@ -9,8 +9,8 @@
 ![image](https://user-images.githubusercontent.com/61589737/225195357-89851ac4-808c-4626-a9b2-a43597c24602.png)
 
 ## 點擊下方圖片或連結觀看影片
-* https://www.youtube.com/watch?v=4TBKeZbBKKM
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/4TBKeZbBKKM/0.jpg)](https://www.youtube.com/watch?v=4TBKeZbBKKM "中風後癲癇偵測展示系統")
+* https://www.youtube.com/watch?v=4TBKeZbBKKM
 
 
 ## 摘要
