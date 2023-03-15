@@ -8,8 +8,9 @@
 
 ![image](https://user-images.githubusercontent.com/61589737/225195357-89851ac4-808c-4626-a9b2-a43597c24602.png)
 
-## 點擊圖片觀看影片
+## 點擊下方圖片或連結觀看影片
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/4TBKeZbBKKM/0.jpg)](https://www.youtube.com/watch?v=4TBKeZbBKKM "中風後癲癇偵測展示系統")
+https://www.youtube.com/watch?v=4TBKeZbBKKM
 
 ## 摘要
 癲癇為一常見的腦部疾病，起因於腦部神經細胞過度活躍，而引起的異常放電現象，腦電圖 (Electroencephalography, EEG) 是目前診斷癲癇主要依據之一，用以檢測大腦的功能性是否正常。已有許多論文針對癲癇患者與一般人之腦波差異進行研究，並已整理出許多癲癇樣波的波型。然而，對於中風病人的癲癇診斷，醫師並不建議用已知的癲癇樣波來分辨，原因是中風會造成部分腦區域受損，使腦電圖在中風急性期也可能出現癲癇樣波，造成判斷是否為癲癇的效果不準確。因此，我們設計了針對中風病患EEG 之訊號處理及特徵抽取方法，並使用機器學習模型進行偵測。
