@@ -5,23 +5,12 @@
 This folder contains the projects I have completed, each project I participated in in the past work or study. In these projects, I have learned a lot of knowledge and experience about project management, teamwork and technology application, which are very helpful for my future development. I hold different roles in these projects, some are project leaders, some are R&D engineers, and some are cross-domain industry-university cooperation research assistants. I learned how to effectively communicate with team members, manage progress and achieve goals. If you want to know more about my project experience, please click into the folder of each project to view the details.
 
 
-* 完成專案的目標與成果/ Achieved project goals and results
-* 專案貢獻/ Project contributions
-* 關鍵成果/ Key outcomes
-* 完成時間/ Completion time
-* 專案描述/ Project Description:
-
-* 專案簡介/ Project overview
-* 專案目標/ Project goals
-* 專案內容/ Project content
-* 專案範圍/ Project scope
+* 完成專案的目標與成果/ Achieved project goals and results: 
+* 專案貢獻/ Project contributions: 
+* 關鍵成果/ Key outcomes: 
+* 完成時間/ Completion time: 
 * 專案技能/ Project Skills:
-
-* 應用技能/ Applied skills
-* 技能應用/ Skill utilization
-* 技能開發/ Skill development
 * 專案角色/ Project Roles:
-
-* 專案負責人/ Project leader
-* 專案協作者/ Project collaborator
-* 團隊成員/ Team member
+* 專案負責人/ Project leader:
+* 專案協作者/ Project collaborator:
+* 團隊成員/ Team member:
