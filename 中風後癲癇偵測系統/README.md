@@ -19,3 +19,32 @@
 研究資料來源為台北榮總2012 年至2017 年針對中風病人所蒐集的腦電波資料，在量測腦電波訊號方面，電極採用10-20 System，實驗中使用不同光照赫茲作為誘發癲癇的外在刺激，受測者在時間軸上依序處於「休息、光照刺激、休息」狀態，總共量測831 位中風病患，收集1323 筆EEG。腦電波前處理先透過Resampling、Notch Filtering、Bandpass Filtering、Epochs、CSP 等步驟去除雜訊、強化訊號特徵，再利用小波轉換 (Wavelet Transform) 將不同頻帶腦電波分離出來以獲得更多資訊，最後透過統計學對訊號提取出富含資訊性且不冗餘的特徵值，並以機器學習方式進行腦波分析。透過大量實驗探討在中風癲癇上適合的前處理、特徵與模型，其中採用Coherence、Entropy、Kurtosis、Skewness 四種特徵的Logistic Regression 模型，在1 分54 秒的EEG 訊號分析，可以獲得0.7192 的F1-score、0.4479 的Sensitivity 及0.8313 的Specificity，與當前的癲癇偵測機器學習方法與EEG 深度學習模型比較，有顯著的效果提升。此外，我們開發了一個視窗程式介面，可以選擇癲癇偵測模型，觀察EEG 腦波時間序列分析，用以輔助醫師決策，冀望於此次的初步探索，可以開啟腦波分析於中風癲癇的研究濫觴。
 
 關鍵詞：腦電圖、小波分析、中風癲癇、機器學習、臨床決策支援系統
+
+## 專案故事
+
+* 完成專案的目標與成果/ Achieved project goals and results: 
+參與科技部計畫—與臺北榮民總醫院跨域合作開發「中風後癲癇偵測系統」。對於中風而形成癲癇病灶的情況，醫師並不建議用目前已有的癲癇樣波來分辨，原因是中風為腦部後天構造性病變，會造成部分腦區域受損，使腦電圖在中風急性期也可能出現癲癇樣波，造成判斷癲癇用的樣波較不準確，故希望能有其他指標能協助診斷中風後癲癇。故開發該系統主要是使用ML與DL技術，建立出可偵測「異常腦電圖」之模型。過程包含大量的醫學數據分析、訊號處理，及使用多種機器學習模型，其實驗證明該結果可有效改善現今偵測系統使用之狀況。
+
+* 專案貢獻/ Project contributions: 
+概念發想與驗證 Proof Of Concept --> 軟體開發 Development --> 軟體驗證 Verfication --> 軟體卻笑 Validation 
+
+* 關鍵成果/ Key outcomes: 
+新議題探索性研究-中風後癲癇訊號的大量實驗、臨床決策支援系統
+
+* 完成時間/ Completion time: 
+2020
+
+* 專案技能/ Project Skills:
+機器學習(Scikit-learn)、深度學習(Tensorflow)、訊號處理(Filter、Common spatial patterns、Wavelet Transform)、腦電圖(EEG)、中風癲癇、臨床決策支援系統(Tkinter)
+
+* 專案角色/ Project Roles:
+研究助理、碩士生、軟體開發
+
+* 專案負責人/ Project leader:
+李龍豪教授
+
+* 專案協作者/ Project collaborator:
+周建成醫師
+
+* 團隊成員/ Team member:
+無
