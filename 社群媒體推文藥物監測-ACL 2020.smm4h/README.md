@@ -4,7 +4,10 @@
 
 提高方法效果主張為分別強化ML與DL模型的特點，並補足各自弱項，並將兩者結果進行投票。
 1. DL模型(ELECTRA transformers)在極度不平衡資料上泛用性佳，經實驗後評估主要問題在資料量不足，然而要添加大量標註資料是令人沮喪的，故我們採用半監督式學習（Semi-supervised Learning）的精神，利用ML模型(SVM)訓練個Precision高的標註用模型，將Web crawler的資料做auto-labeling，再由DL模型訓練。
-2. ML模型(Decision tree)經實驗在極度不平衡資料上較其他統計學的機器學習模型不受資料比例影響，擁有高度Precision的同時也具有一定程度的泛用性，而主要問題在
+
+2. ML模型(Decision tree)是基於TF-IDF特徵做分類，經實驗在極度不平衡資料上較其他統計學的機器學習模型不受資料比例影響，擁有高度Precision的同時也具有一定程度的泛用性，而主要問題仍在特徵比例懸殊，容易學到大量0類別的資料，故首先我們在TF-IDF抽特徵時不會切分Train、Validation data，亦不會做K-fold等等減少輸入資料量的前處理，將特徵盡可能的抽取完整後，再進行模型訓練，這樣的好處是最大程度確保極少的1類別能被完整的統計特徵，基於這個概念，我們在訓練模型上也特地固定了資料比例，讓1類別的資料每次都能最大程度的被模型學到，而0類別一直換，確保了模型能不斷加強1類別的學習，也不會被過多的0類別影響學習特徵，我們用集成學習的概念訓練552顆Decision tree，但每一顆樹的1類別是固定拿全不Training data、0類別為隨機，而為避免over-fitting的風險，每一棵樹我們仍再隨機添加9筆半監督式學習的1類別，此集成學習模型是一種在抽特徵及訓練時變形的Random Forest，專注在找出極度不平衡資料的特徵。
+
+3. 最後，根據我們的錯誤分析，我們發現決策樹分類器與 ELECTRA 部分互補。 因此，從 ELECTRA 轉換器和決策樹預測為正類的集成測試實例集在我們的提交中標記為“1”，否則標記為“0”。
 
 This study describes our proposed model design for the SMM4H 2020 Task 1. We fine-tune ELECTRA transformers using our trained SVM filter for data augmentation, along with decision trees to detect medication mentions in tweets. Our best F1-score of 0.7578 exceeded the mean score 0.6646 of all 15 submitting teams.
 
@@ -35,28 +38,29 @@ Table 1 shows the results on the validation and test sets. The evaluation metric
 ## 專案故事
 
 * 完成專案的目標與成果/ Achieved project goals and results: 
-參與科技部計畫—與臺北榮民總醫院跨域合作開發「中風後癲癇偵測系統」。對於中風而形成癲癇病灶的情況，醫師並不建議用目前已有的癲癇樣波來分辨，原因是中風為腦部後天構造性病變，會造成部分腦區域受損，使腦電圖在中風急性期也可能出現癲癇樣波，造成判斷癲癇用的樣波較不準確，故希望能有其他指標能協助診斷中風後癲癇。故開發該系統主要是使用ML與DL技術，建立出可偵測「異常腦電圖」之模型。過程包含大量的醫學數據分析、訊號處理，及使用多種機器學習模型，其實驗證明該結果可有效改善現今偵測系統使用之狀況。
+本研究描述了參與 SMM4H 2020 任務 1 的 NCUEE 系統，用於藥物提及檢測，包括系統設計、實施和評估。 我們最好的 F1 分數為 0.7578 超過了所有 15 個團隊的平均分數 0.6646。
 
 * 專案貢獻/ Project contributions: 
-概念發想與驗證 Proof Of Concept --> 軟體開發 Development --> 軟體驗證 Verfication --> 軟體卻笑 Validation 
+概念發想與驗證 Proof Of Concept --> 軟體開發 Development --> 軟體驗證 Verfication --> 軟體確效 Validation 
 
 * 關鍵成果/ Key outcomes: 
-新議題探索性研究-中風後癲癇訊號的大量實驗、臨床決策支援系統
+新議題探索性研究-社群媒體的不平衡文字資料訓練方法
 
 * 完成時間/ Completion time: 
 2020
 
 * 專案技能/ Project Skills:
-機器學習(Scikit-learn)、深度學習(Tensorflow)、訊號處理(Filter、Common spatial patterns、Wavelet Transform)、腦電圖(EEG)、中風癲癇、臨床決策支援系統(Tkinter)
+機器學習(Scikit-learn)、深度學習(Tensorflow)、自然語言處理(TF-IDF、Word Embeddings)、孕婦藥物
 
 * 專案角色/ Project Roles:
-研究助理、碩士生、軟體開發
+研究方向主導、碩士生(碩二)、軟體開發
 
 * 專案負責人/ Project leader:
 李龍豪教授
 
 * 專案協作者/ Project collaborator:
-周建成醫師
+陳昌浩(碩一)
 
 * 團隊成員/ Team member:
-無
+陳柏翰(碩一)
+高浩銓(碩一)
